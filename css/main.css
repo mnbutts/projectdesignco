@@ -94,19 +94,160 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 1em;
+    line-height: 1.7;
+    position: relative;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 131%;
+    margin: 0;
+    float: left;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 337%;
+}
+h3 {
+    text-transform: uppercase;
+    font-size: 118%; 
+}
+footer p {
+    font-size: 125%;
+}
+header {
+    background-color: #000000;
+    color: #FFFFFF;
+    overflow: auto;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+}
+i {
+    float: right;
+    margin: 0;
+    padding-top: 5px;
+    font-size: 140%;
+}
+section.container {
+    background-image: url(../img/purple-bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 200px 0px;
+    width: 100%;
+}
+section.container h2 {
+    line-height: 1;
+    margin: 0 auto;
+    white-space: normal;
+    margin-bottom: 40px;
+}
+section.container p {
+    border: 1px solid #FFFFFF;
+    padding: 5px 0px; 
+    width: 145px;
+    margin: 0 auto;
+    font-size: 125%;
+    text-transform: uppercase;
+    white-space: pre;
+}
+section.aboutus {
+    padding: 68px 68px 55px 21px;
+    border: 1px solid #ccc;
+    font-weight: 550;
+}
+section.main {
+    padding: 68px 21px 55px 21px;
+    border: 1px solid #ccc;
+    height: 100%;
+    overflow: auto;
+}
 
 
+div.project_cocktail {
+    background-image: url(../img/latestwork/1-cocktail.jpeg);
+     
+}
+div.project_disco {
+    background-image: url(../img/latestwork/2-disco.jpeg);
+}
+div.project_bookstore {
+    background-image: url(../img/latestwork/3-bookstore.jpeg);
+}
+div.project_traffic {
+    background-image: url(../img/latestwork/4-traffic.jpeg);
+}
+div.project_concert {
+    background-image: url(../img/latestwork/5-concert.jpg);
+}
+div.project_nightlife {
+    background-image: url(../img/latestwork/6-nightlife.jpg);
+}
+div.project_bar {
+    background-image: url(../img/latestwork/7-bar.jpg);
+}
+div.grid {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding-top: 170px;
+    height: 300px; 
+    margin-top: 5px;
+    width: 49.5%;
+    float: left;
+  
+   
+    position: relative;
+}
 
+div.col-2 {
+    float: right;
+    width: 49.5%;
+}
+.latestgrid:hover > div {
+    opacity: 0.4;
+}
+.latestgrid:hover > .grid:hover {
+    opacity: 1.0;
+}
+p.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 100;
+    opacity: 1;
+    font-size: 120%;
+    font-weight: bold;
+}
+p a:link {
+   color: #000000;
+   text-decoration: none;
+}
+p a:visited {
+    color: #000000;
+}
+p a:hover {
+    content: #FFFFFF;
+}
 
-
-
-
-
-
-
-
-
-
+footer {
+    clear: both;
+}
 
 
 
