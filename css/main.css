@@ -101,42 +101,118 @@ html {
   box-sizing: inherit;
 }
 body {
-    font-family: Verdana, sans-serif;
-    font-size: 1em;
-    line-height: 1.7;
-    position: relative;
+    padding-top: 3.25em; /*--AExtra padding to clear fixed header --*/
 }
-h1 {
-    text-transform: uppercase;
-    font-size: 131%;
+.page-header h1 {
     margin: 0;
-    float: left;
 }
-h2 {
+h1,
+h2,
+h3,
+h4 {
     text-transform: uppercase;
-    font-size: 337%;
+    font-size: 1em;
 }
-h3 {
-    text-transform: uppercase;
-    font-size: 118%; 
+img {
+    max-width: 100%;
 }
-footer p {
-    font-size: 125%;
-}
-header {
+.page-header {
     background-color: #000000;
     color: #FFFFFF;
-    overflow: auto;
-    padding: 15px;
+    padding: 1em;
+    top: 0;
+    left: 0;
     position: fixed;
     width: 100%;
+    z-index: 10000000;
 }
-i {
-    float: right;
+.page-header h1 {
     margin: 0;
-    padding-top: 5px;
-    font-size: 140%;
 }
+
+.page-header .main-nav {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+} 
+.page-section {
+    padding: 1em;
+    border-bottom: 1px solid #DDDDDD;
+} 
+.jumbotron {
+    position: relative;
+    padding: 0;
+}
+.jumbotron-bg {
+    display: block;  /*--Allows backgound to align --*/
+    position: relative;
+    z-index: -10;
+    width: 100%;   /*--Allows backgound image to display 100% --*/
+}
+.jumbotron-content {
+    position: absolute;
+    text-align: center;
+    line-height: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+}
+.btn {
+    display: inline-block; /*--Allows button to align and not bump with h2 --*/
+    font-size: 1.25em;
+    border: 0.125em solid #000000;
+    text-decoration: none;
+    padding: 0.75em 1em;
+    color: #000000;
+}
+.btn:hover {
+    background: #000000;
+    color: #FFFFFF;
+    text-decoration: none;
+} 
+.jumbotron-content h2 {
+    margin-top: 0;
+    font-size: 3em;
+}
+.jumbotron-content .btn {
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+}
+.jumbotron-content .btn:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+.project-thumb {
+    position: relative;
+    width: 50%;
+    float: left;
+    background-color: hsla(0, 100%, 100%, 0.75); /*--use alpha over opacity for browser consistency--*/
+    border: 1px solid #FFFFFF; /*--Created column gap --*/
+}
+.project-thumb:hover {
+    background-color: hsla(0, 0%, 0%, 0.5);
+}
+.project-thumb img {
+    position: relative;
+    z-index: -10; /*--Allows img to go behind content container--*/
+}
+.project-thumb h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0; /*-- needed to get rid of extra margin so that text would align--*/
+    text-align: center;
+    color: #000000; /*--This is the color before hovering, will appear on top layer --*/
+}
+.project-thumb:hover h3 {
+    color: #FFFFFF;
+}
+footer {
+    text-align: center;
+}
+/*
 section.container {
     background-image: url(../img/purple-bg.jpeg);
     background-repeat: no-repeat;
@@ -157,8 +233,8 @@ section.container h2 {
 section.container p {
     border: 1px solid #FFFFFF;
     padding: 5px 0px; 
-    width: 145px;
     margin: 0 auto;
+    width: 50%;
     font-size: 125%;
     text-transform: uppercase;
     white-space: pre;
@@ -173,31 +249,11 @@ section.main {
     border: 1px solid #ccc;
     height: 100%;
     overflow: auto;
+    clear: both;
 }
 
 
-div.project_cocktail {
-    background-image: url(../img/latestwork/1-cocktail.jpeg);
-     
-}
-div.project_disco {
-    background-image: url(../img/latestwork/2-disco.jpeg);
-}
-div.project_bookstore {
-    background-image: url(../img/latestwork/3-bookstore.jpeg);
-}
-div.project_traffic {
-    background-image: url(../img/latestwork/4-traffic.jpeg);
-}
-div.project_concert {
-    background-image: url(../img/latestwork/5-concert.jpg);
-}
-div.project_nightlife {
-    background-image: url(../img/latestwork/6-nightlife.jpg);
-}
-div.project_bar {
-    background-image: url(../img/latestwork/7-bar.jpg);
-}
+
 div.grid {
     background-repeat: no-repeat;
     background-size: cover;
@@ -208,20 +264,13 @@ div.grid {
     margin-top: 5px;
     width: 49.5%;
     float: left;
-  
-   
     position: relative;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
 }
-
 div.col-2 {
     float: right;
     width: 49.5%;
-}
-.latestgrid:hover > div {
-    opacity: 0.4;
-}
-.latestgrid:hover > .grid:hover {
-    opacity: 1.0;
 }
 p.caption {
     position: absolute;
@@ -241,13 +290,19 @@ p a:link {
 p a:visited {
     color: #000000;
 }
-p a:hover {
-    content: #FFFFFF;
+.grid:hover {
+    color: #FFFFFF;
+    opacity: 1;
 }
+p a:hover {
+    opacity: 1;
+    color: #FFFFFF;
 
+}
 footer {
     clear: both;
-}
+    text-align: center;
+} */
 
 
 
